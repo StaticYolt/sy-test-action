@@ -1,9 +1,10 @@
 name: 'Test Action'
 inputs:
   python-version:
+    description: 'Python version to use'
     required: true
 runs:
-  using: "composite"
+  using: 'composite'
   steps:
     - name: Say Hello with Python Version
       run: echo "Hello there user, you are using python version ${{ inputs.python-version }}"
