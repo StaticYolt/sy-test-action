@@ -7,3 +7,4 @@ runs:
   steps:
     - name: Say Hello with Python Version
       run: echo "Hello there user, you are using python version ${{ inputs.python-version }}"
+      shell: bash
