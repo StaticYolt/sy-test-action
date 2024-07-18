@@ -7,11 +7,10 @@ runs:
   using: 'composite'
   steps:
     - name: Say Hello with Python Version
+      shell: bash
       run: echo "Hello there user, you are using python version ${{ inputs.python-version }}"
     - name: Set GitHub Path
+      shell: bash
       run: echo "$GITHUB_ACTION_PATH" >> $GITHUB_PATH
       env:
         GITHUB_ACTION_PATH: ${{ github.action_path }}
-defaults:
-  run:
-    shell: bash
